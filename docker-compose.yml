@@ -10,7 +10,7 @@ services:
             args:
                 - INSTALL_XDEBUG=false
                 - INSTALL_MONGO=false
-                - INSTALL_NODE=false
+                - INSTALL_NODE=true
                 - INSTALL_DRUSH=false
                 - COMPOSER_GLOBAL_INSTALL=false
                 - INSTALL_WORKSPACE_SSH=false
@@ -105,10 +105,10 @@ services:
         ports:
             - "3306:3306"
         environment:
-            MYSQL_DATABASE: homestead
-            MYSQL_USER: homestead
-            MYSQL_PASSWORD: secret
-            MYSQL_ROOT_PASSWORD: root
+            MYSQL_DATABASE: protocols
+            MYSQL_USER: protocols
+            MYSQL_PASSWORD: ZeerGeheim
+            MYSQL_ROOT_PASSWORD: AheadFoolChildWarmth6
 
 ### PostgreSQL Container ####################################
 
@@ -234,9 +234,9 @@ services:
         build: ./phpmyadmin
         environment:
             PMA_ARBITRARY: 1
-            MYSQL_USER: homestead
-            MYSQL_PASSWORD: secret
-            MYSQL_ROOT_PASSWORD: root
+            MYSQL_USER: protocols
+            MYSQL_PASSWORD: ZeerGeheim
+            MYSQL_ROOT_PASSWORD: AheadFoolChildWarmth6
         volumes_from:
             - volumes_data
         ports:
